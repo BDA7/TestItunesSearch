@@ -6,16 +6,23 @@
 //
 
 import UIKit
-import PinLayout
+import SnapKit
+import CustomUI
 
 extension RootViewController: ViewPresentable {
     func createUI() {
-        createTableView()
+        createCollectionView()
     }
     
-    private func createTableView() {
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    private func createCollectionView() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(RootCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        
+        view.addSubview(collectionView)
+        collectionView.backgroundColor = CustomColors.backgroundColor
+        collectionView.snp.makeConstraints {
+            $0.top.leading.trailing.bottom.equalToSuperview()
+        }
     }
 }

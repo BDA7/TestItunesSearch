@@ -9,4 +9,5 @@ import UIKit
 
 public enum CustomColors {
     public static let backgroundColor = UIColor.black
+    public static let baseTintColor = UIColor.white
 }

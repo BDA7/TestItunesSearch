@@ -10,6 +10,9 @@
 		663FE9272AAA59CB0070CDFC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663FE9262AAA59CB0070CDFC /* BaseViewController.swift */; };
 		663FE9292AAA5AFC0070CDFC /* RootViewController+CreateUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663FE9282AAA5AFC0070CDFC /* RootViewController+CreateUI.swift */; };
 		663FE92B2AAA5B870070CDFC /* ViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663FE92A2AAA5B870070CDFC /* ViewPresentable.swift */; };
+		663FE92E2AAA62870070CDFC /* RootCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663FE92D2AAA62870070CDFC /* RootCollectionViewCell.swift */; };
+		663FE9312AAA63190070CDFC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 663FE9302AAA63190070CDFC /* Kingfisher */; };
+		663FE9342AAA69DE0070CDFC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 663FE9332AAA69DE0070CDFC /* SnapKit */; };
 		666CF3D42AA7D99200FC11A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CF3D32AA7D99200FC11A4 /* AppDelegate.swift */; };
 		666CF3D62AA7D99200FC11A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CF3D52AA7D99200FC11A4 /* SceneDelegate.swift */; };
 		666CF3D82AA7D99200FC11A4 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CF3D72AA7D99200FC11A4 /* RootViewController.swift */; };
@@ -17,7 +20,6 @@
 		666CF3DE2AA7D99200FC11A4 /* TestItunesSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 666CF3DC2AA7D99200FC11A4 /* TestItunesSearch.xcdatamodeld */; };
 		666CF3E02AA7D99600FC11A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 666CF3DF2AA7D99600FC11A4 /* Assets.xcassets */; };
 		666CF3E32AA7D99600FC11A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666CF3E12AA7D99600FC11A4 /* LaunchScreen.storyboard */; };
-		666CF3EC2AA7D9CB00FC11A4 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 666CF3EB2AA7D9CB00FC11A4 /* PinLayout */; };
 		666CF3EF2AA7D9E100FC11A4 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 666CF3EE2AA7D9E100FC11A4 /* RxCocoa */; };
 		666CF3F12AA7D9E100FC11A4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 666CF3F02AA7D9E100FC11A4 /* RxSwift */; };
 		666CF3FF2AA7DB5200FC11A4 /* CustomUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 666CF3FE2AA7DB5200FC11A4 /* CustomUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,6 +32,7 @@
 		666CF41A2AA8AD7A00FC11A4 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CF4192AA8AD7A00FC11A4 /* RootViewModel.swift */; };
 		666CF41D2AA8F09200FC11A4 /* RootUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CF41C2AA8F09200FC11A4 /* RootUseCases.swift */; };
 		666CF41F2AA8F16800FC11A4 /* RootConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CF41E2AA8F16800FC11A4 /* RootConfiguration.swift */; };
+		66BB0A732AABB3040064C9DD /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB0A722AABB3040064C9DD /* CustomFonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,7 @@
 		663FE9262AAA59CB0070CDFC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		663FE9282AAA5AFC0070CDFC /* RootViewController+CreateUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootViewController+CreateUI.swift"; sourceTree = "<group>"; };
 		663FE92A2AAA5B870070CDFC /* ViewPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentable.swift; sourceTree = "<group>"; };
+		663FE92D2AAA62870070CDFC /* RootCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCollectionViewCell.swift; sourceTree = "<group>"; };
 		666CF3D02AA7D99200FC11A4 /* TestItunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestItunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		666CF3D32AA7D99200FC11A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		666CF3D52AA7D99200FC11A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 		666CF4192AA8AD7A00FC11A4 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		666CF41C2AA8F09200FC11A4 /* RootUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootUseCases.swift; sourceTree = "<group>"; };
 		666CF41E2AA8F16800FC11A4 /* RootConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootConfiguration.swift; sourceTree = "<group>"; };
+		66BB0A722AABB3040064C9DD /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +92,9 @@
 			files = (
 				666CF3F12AA7D9E100FC11A4 /* RxSwift in Frameworks */,
 				666CF3EF2AA7D9E100FC11A4 /* RxCocoa in Frameworks */,
-				666CF3EC2AA7D9CB00FC11A4 /* PinLayout in Frameworks */,
 				666CF4022AA7DB5200FC11A4 /* CustomUI.framework in Frameworks */,
+				663FE9312AAA63190070CDFC /* Kingfisher in Frameworks */,
+				663FE9342AAA69DE0070CDFC /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +123,14 @@
 				666CF40F2AA7DD8800FC11A4 /* LaunchScreen */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		663FE92C2AAA600A0070CDFC /* RootCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				663FE92D2AAA62870070CDFC /* RootCollectionViewCell.swift */,
+			);
+			path = RootCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		666CF3C72AA7D99200FC11A4 = {
@@ -165,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				666CF4092AA7DB6B00FC11A4 /* CustomColors.swift */,
+				66BB0A722AABB3040064C9DD /* CustomFonts.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -190,6 +205,7 @@
 		666CF40D2AA7DD6F00FC11A4 /* RootView */ = {
 			isa = PBXGroup;
 			children = (
+				663FE92C2AAA600A0070CDFC /* RootCollectionViewCell */,
 				663FE9282AAA5AFC0070CDFC /* RootViewController+CreateUI.swift */,
 				666CF3D72AA7D99200FC11A4 /* RootViewController.swift */,
 				666CF4192AA8AD7A00FC11A4 /* RootViewModel.swift */,
@@ -280,9 +296,10 @@
 			);
 			name = TestItunesSearch;
 			packageProductDependencies = (
-				666CF3EB2AA7D9CB00FC11A4 /* PinLayout */,
 				666CF3EE2AA7D9E100FC11A4 /* RxCocoa */,
 				666CF3F02AA7D9E100FC11A4 /* RxSwift */,
+				663FE9302AAA63190070CDFC /* Kingfisher */,
+				663FE9332AAA69DE0070CDFC /* SnapKit */,
 			);
 			productName = TestItunesSearch;
 			productReference = 666CF3D02AA7D99200FC11A4 /* TestItunesSearch.app */;
@@ -335,8 +352,9 @@
 			);
 			mainGroup = 666CF3C72AA7D99200FC11A4;
 			packageReferences = (
-				666CF3EA2AA7D9CB00FC11A4 /* XCRemoteSwiftPackageReference "PinLayout" */,
 				666CF3ED2AA7D9E100FC11A4 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				663FE92F2AAA63190070CDFC /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				663FE9322AAA69DE0070CDFC /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 666CF3D12AA7D99200FC11A4 /* Products */;
 			projectDirPath = "";
@@ -383,6 +401,7 @@
 				666CF4122AA8A6A300FC11A4 /* ItunesModel.swift in Sources */,
 				666CF4182AA8AD3800FC11A4 /* ViewModelProtocol.swift in Sources */,
 				666CF41D2AA8F09200FC11A4 /* RootUseCases.swift in Sources */,
+				663FE92E2AAA62870070CDFC /* RootCollectionViewCell.swift in Sources */,
 				666CF3D62AA7D99200FC11A4 /* SceneDelegate.swift in Sources */,
 				666CF41A2AA8AD7A00FC11A4 /* RootViewModel.swift in Sources */,
 				666CF3DE2AA7D99200FC11A4 /* TestItunesSearch.xcdatamodeld in Sources */,
@@ -394,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				666CF40A2AA7DB6B00FC11A4 /* CustomColors.swift in Sources */,
+				66BB0A732AABB3040064C9DD /* CustomFonts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,12 +733,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		666CF3EA2AA7D9CB00FC11A4 /* XCRemoteSwiftPackageReference "PinLayout" */ = {
+		663FE92F2AAA63190070CDFC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/layoutBox/PinLayout.git";
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 7.0.0;
+			};
+		};
+		663FE9322AAA69DE0070CDFC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
 			};
 		};
 		666CF3ED2AA7D9E100FC11A4 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
@@ -740,10 +768,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		666CF3EB2AA7D9CB00FC11A4 /* PinLayout */ = {
+		663FE9302AAA63190070CDFC /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 666CF3EA2AA7D9CB00FC11A4 /* XCRemoteSwiftPackageReference "PinLayout" */;
-			productName = PinLayout;
+			package = 663FE92F2AAA63190070CDFC /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		663FE9332AAA69DE0070CDFC /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 663FE9322AAA69DE0070CDFC /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 		666CF3EE2AA7D9E100FC11A4 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;

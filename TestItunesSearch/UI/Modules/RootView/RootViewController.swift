@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class RootViewController: BaseViewController {
+final class RootViewController: BaseViewController {
     
     private var artistName: String = ""
     
@@ -19,7 +19,9 @@ class RootViewController: BaseViewController {
     
     private var disposeBag = DisposeBag()
     
-    let tableView = UITableView(frame: .zero, style: .grouped)
+    private var albumsModel: ItunesModel<Album>?
+    
+    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
     override func bindViewModel() {
         let input = RootViewModel.Input(artisName: searchText.asObservable())
@@ -27,11 +29,15 @@ class RootViewController: BaseViewController {
         let output = viewModel.transform(input: input)
         
         output.itunesModel
-            .drive(onNext: { albums in
-                print(albums)
+            .drive(onNext: { [weak self] albums in
+                guard let self = self else { return }
+                self.albumsModel = albums
+                self.collectionView.reloadData()
             }).disposed(by: disposeBag)
         
-        changeText()
+        DispatchQueue.global().asyncAfter(deadline: .now() + 5) { [weak self] in
+            self?.changeText()
+        }
     }
     
     private func changeText() {
@@ -39,20 +45,24 @@ class RootViewController: BaseViewController {
     }
 }
 
-extension RootViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+extension RootViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return albumsModel?.resultCount ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width / 2.5, height: collectionView.frame.width / 2)
     }
 }
 
-extension RootViewController: UITableViewDataSource {
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+extension RootViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! RootCollectionViewCell
+        guard let viewModelCell = albumsModel?.results[indexPath.row] else {
+            return UICollectionViewCell()
+        }
+        cell.updateViewModel(viewModelCell)
         
         return cell
     }
-    
-    
 }
